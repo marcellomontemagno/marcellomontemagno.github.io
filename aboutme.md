@@ -13,7 +13,7 @@ I will not bother you with other details about myself, there's my cv for this, b
 Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
 Martin Fowler, 2008.
 
-### what's in the blog, and why another blog?
+### What's in the blog, and why another blog?
 
 As a programmer, I've grown up with a pc replacing my memory, that should be the reason why, I forget things, my memory is very selective and I often end up in writing notes about things I considered useful, interesting, or simply beautiful.
 
