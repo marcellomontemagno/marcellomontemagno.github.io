@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About me
 subtitle: A curly haired programmer, enthusiast, happy to build, happy to break if needed
 ---
 
