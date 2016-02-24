@@ -68,7 +68,7 @@ That's all you need to know trough an example:
 	
 [Full Markdown documntation](https://daringfireball.net/projects/markdown/ "markdown documentation"){:target="_blank"}
 
-### What if I want to customize the style or the pages?
+### What if I want to customize the style or pages that are not posts?
 
 I've choosen the [beautiful-jekyll](http://deanattali.com/beautiful-jekyll/ "beautiful-jekyll"){:target="_blank"} theme 
 
