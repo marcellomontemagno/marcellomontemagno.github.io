@@ -40,18 +40,18 @@ author:
   facebook: marcello.montemagno
   github: marcellomontemagno # eg. daattali
   twitter: cello3m # eg. daattali
-  linkedin: marcello.montemagno  # eg. "pub/dean-attali/8/946/143"
+  linkedin: in/marcello-montemagno-28b61148  # eg. "pub/dean-attali/8/946/143"
   stackoverflow: 4266319/marcello-montemagno  # eg. "3943160/daattali"
  
 # Select which links to show in the footer
 footer-links-active:
-  rss: false
+  rss: true
   facebook: true
   email: true
   twitter: true
   github: true
-  linkedin: false
-  stackoverflow: false
+  linkedin: true
+  stackoverflow: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
