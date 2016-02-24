@@ -29,8 +29,9 @@ Jekyll is a static site generator. It takes raw text files (e.g: Markdown a plai
 - navigate into the _posts folder
 - create a new file with the following naming convention YEAR-MONTH-DAY-title.md
 - write your post using Markdown plain text formatting syntax
+- refresh your browser at http://localhost:4000, changes should be displayed
 
-### Is learning Markdown worth it? I simply want to write some simple content?
+### Is learning Markdown worth it? I only care about contents!
 
 That's all you need to know trough an example:
 
@@ -71,7 +72,7 @@ That's all you need to know trough an example:
 
 I've choosen the [beautiful-jekyll](http://deanattali.com/beautiful-jekyll/ "beautiful-jekyll"){:target="_blank"} theme 
 
-You can search for an existing theme online (e.g [jekyllthemes.io](http://jekyllthemes.io/ "Jekyll Themes"){:target="_blank"}) or you can create you own theme. 
+You can search for an existing theme online (e.g [jekyllthemes.io](http://jekyllthemes.io/ "Jekyll Themes"){:target="_blank"}) or create your own theme. 
 
 Anything you need is in the [Jekyll official documentation](https://jekyllrb.com/docs/home/ "Jekyll doc"){:target="_blank"}
 
