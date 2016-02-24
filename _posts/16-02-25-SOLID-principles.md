@@ -1,3 +1,8 @@
+---
+layout: post
+title: SOLID principles
+---
+
 ### What is SOLID?
 
 SOLID is a mnemonic acronym for five programming principles
