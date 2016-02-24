@@ -76,5 +76,45 @@ You can search for an existing theme online (e.g [jekyllthemes.io](http://jekyll
 
 Anything you need is in the [Jekyll official documentation](https://jekyllrb.com/docs/home/ "Jekyll doc"){:target="_blank"}
 
+### How to host my new blog through github?
 
+- Create a new repository on GitHub.com through the "new repository" button once logged, you can skip to initialize the new repository with README, license, or gitignore files, these files can be added later
+
+- Open Terminal (for Mac and Linux users) or the command prompt (for Windows users)
+
+- Change the current working directory to your local project
+
+- Initialize the local directory as a Git repository
+
+	git init
+
+- Add the files in your new local repository. This stages them for the first commit.
+
+	git add .
+	# Adds the files in the local repository and stages them for commit
+
+- Commit the blog files
+
+	git commit -m "First commit"
+	# Commits the tracked changes and prepares them to be pushed to a remote repository
+
+- Copy remote repository URL fieldAt the top of your GitHub repository's Quick Setup page
+
+- In Terminal, add the URL for the remote repository where your local repository will be pushed.
+
+	git remote add origin remote repository URL
+	# Sets the new remote
+	git remote -v
+	# Verifies the new remote URL
+
+- Push the changes in your local repository to GitHub.
+
+	git push origin master
+	# Pushes the changes in your local repository up to the remote repository you specified as the origin
+
+- Access to your new repository through Github.com and then click on the setting button
+
+- Rename your repositoy to yourGitUsername.github.io
+
+- The page should then be displayed to http://yourGitUsername.github.io in a couple of minutes
 
