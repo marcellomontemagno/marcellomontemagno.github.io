@@ -18,10 +18,10 @@ Jekyll is a static site generator. It takes raw text files (e.g: Markdown a plai
 
 - [Install Ruby](http://example.com/ "Install Ruby") (remember to check 'add ruby executables to you path' during the installation)
 - run these commands from the directory where you want to create your site
-	* gem install jekyll
-	- jekyll new your-site-name
-	- cd your-site-name
-	- jekyll serve
+	gem install jekyll
+	jekyll new your-site-name
+	cd your-site-name
+	jekyll serve
 - open your browser at http://localhost:4000
 
 ### How to write my first post?
