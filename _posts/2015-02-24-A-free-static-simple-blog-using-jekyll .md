@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A free, static, host-as-you-want, simple, blog in 10 minutes using jekyll 
+title: A free, simple, static, host-as-you-want blog in 10 minutes using jekyll 
 ---
 
 ### What is jekyll?
