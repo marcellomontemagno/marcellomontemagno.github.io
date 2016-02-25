@@ -5,7 +5,7 @@ title: SOLID principles
 
 ### What is SOLID?
 
-SOLID is a mnemonic acronym for five programming principles. These principles focus on making systems flexible and adaptable when changes are required.
+SOLID is a mnemonic acronym for five programming principles originally codified from Robert Martin "Uncle Bob". These principles focus on making systems flexible and adaptable when changes are required.
 
 ### What are Software Design Principles?
 
@@ -23,7 +23,7 @@ According to Robert Martin "Uncle Bob" there are 3 important characteristics of 
 
 'A class should have only one reason to change.'
 
-You should have isolated behaviours, in small, cohesive, packages. This allow you to make changes to a functionality safely.
+You should have isolated behaviours, in small, cohesive, packages. This allow you to make changes to a functionality safely, you'll not risk to break part of the system that don't need to change.
 
 ### O: Open Close Principle
 
