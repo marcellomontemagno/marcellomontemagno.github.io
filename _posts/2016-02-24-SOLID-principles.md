@@ -29,7 +29,9 @@ You should have isolated behaviours, in small, cohesive, packages. This allow yo
 
 'Software entities like classes, modules and functions should be open for extension but closed for modifications.'
 
-If you have a library containing a set of classes there are many reasons for which you'll prefer to extend it without changing the code that was already written e.g backward compatibility and regression testing. In other words changing code could be dangerous, once you have it written and tested you want to minimize chances to indroduce bugs. But pay attention, there is the danger of introducing unnecessary extension points focusing too much on this principle, be careful to create extension point only for part of the system that will really change.
+If you have a library containing a set of classes there are many reasons for which you'll prefer to extend it without changing the code that was already written e.g backward compatibility and regression testing. In other words changing code could be dangerous, once you have it written and tested you want to minimize chances to indroduce bugs. 
+
+Pay attention, there is the danger of introducing unnecessary extension points focusing too much on this principle, be careful to create extension points only for part of the system that will really change.
 
 ### L: Liskov's Substitution Principle
 
