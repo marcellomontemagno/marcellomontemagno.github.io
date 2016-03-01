@@ -5,7 +5,7 @@ title: The four rules of simple design
 
 ### Good Design?
 
-The idea of "good design" can often lead to a feeling THE BEST design exists, unfortunately this is just not true. There are always more than one design that works well, is to look at things from a comparison point of view that lead to discover what makes a design "better" for the problem we have to solve.
+The idea of "good design" can often lead to the feeling that THE BEST design exists, unfortunately this is just not true. There are always more than one design that works well, is to look at things from a comparison point of view that lead to discover what makes a design "better" for the problem we have to solve.
 
 ### So what make a design "better" than another?
 
@@ -28,11 +28,11 @@ Originally codified by Kent Beck, these rules are listed below in a simplified f
 
 1. Tests Pass
 
-If you can't easily verify that your design works it doesn't really matter how great it is. Notice that the rule doesn't state "Automated tests Pass" it is only about correctness and verification. But never forget that, our system is going to change, how much time will we need to verify that our system is still working after a change is a crucial factor in big applications.
+If you can't easily verify that your design works it doesn't really matter how great it is. Notice that the rule doesn't state "Automated tests Pass" it is only about correctness and verification. But never forget that, our system is going to change, how much time we will need to verify that our system is still working after a change is a crucial factor in big applications.
 
 2. Expresses Intent
 
-One of the most important qualities of a codebase, when it comes to change, is how quickly you can find the part that should change. Paying attention on how our code expresses itself is crucial, it is the key to make our lives easy when we'll need. Notice that pay attention to names is only a little part of this process.
+One of the most important qualities of a codebase, when it comes to change, is how quickly you can find the part that should change. Anoter very important quality is how simple could be to understand that part of the system in order to be able to change it. Paying attention on how our code expresses itself is crucial, it is the key to make our lives easy when we'll need. Notice that pay attention to names is only a little part of this process.
 
 3. No duplication (DRY)
 
