@@ -40,4 +40,4 @@ This rule doesn't refer to duplication at a code level, it is about knowledge du
 
 4. Small
 
-Once applied the other rules, is important to look back and make sure that we don't have something that can be removed, making our code simpler and smaller. You could for example have some vestigial code that seemed like a good idea at the time you wrote the code but that does not give any effective value in the final product.
+Once applied the other rules, is important to look back and make sure that we don't have something that can be removed, making our code simpler and smaller. You could for example have some vestigial code that seemed like a good idea at the time you wrote it but that does not give any effective value in the final product.
