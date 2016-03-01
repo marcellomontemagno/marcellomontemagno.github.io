@@ -36,7 +36,7 @@ One of the most important qualities of a codebase, when it comes to change, is h
 
 3. No duplication (DRY)
 
-This rule doesn't refer to duplication at a code level, it is about knowledge duplication. DRY: Every piece of knowledge should have one and only one representation. Writing new code we could introduce abstractions that was already present somewhere in your system, probably our old abstraction could be reused or they could adapt to our new code if we are really dealing with a knowledge duplication.
+This rule doesn't refer to duplication at a code level, it is about knowledge duplication. DRY: Every piece of knowledge should have one and only one representation. Writing new code we could easily introduce abstractions that was already present somewhere in your system, probably our old abstraction could be reused or they could adapt to our new code if we are really dealing with a knowledge duplication.
 
 4. Small
 
