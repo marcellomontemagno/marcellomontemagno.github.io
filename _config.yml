@@ -28,6 +28,7 @@ avatar: "/img/avatar-icon.png"
 # List of links in the navigation bar
 navbar-links:
   Home: ""
+  Categories: "categories"
   About Me: "aboutme"
   
 # --- Footer options --- #
