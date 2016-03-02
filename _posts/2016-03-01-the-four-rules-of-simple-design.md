@@ -1,8 +1,7 @@
 ---
 layout: post
 title: The four rules of simple design
-tags: 
-- software design
+category: Software design
 ---
 
 ### Good Design?
