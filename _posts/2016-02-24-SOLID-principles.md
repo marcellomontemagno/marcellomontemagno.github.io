@@ -1,8 +1,7 @@
 ---
 layout: post
 title: SOLID principles
-tags: 
-- software design
+category: Software design
 ---
 
 ### What is SOLID?
