@@ -15,7 +15,7 @@ If you think about a constants in software development, one of them is that thin
 - Striving for a simple design, one that is adaptable to changing needs, makes a design a better design.
 - Whenever we have a choice to make, look for the easier to change, makes a design a better design.
 
-Is important to not misunderstand the previous tho statements. Is not making everything configurable or build plenty of extension point the key for better a design. Quite the opposite.
+Is important to not misunderstand the previous tho statements. Is not making everything configurable or build plenty of extension points the key for better a design. Quite the opposite.
 
 As a matter of fact, there is another constant in software development, we don't know what is going to change, and of course, we are not good in predicting the future. Everytime we introduce an extension point we introduce complexity in our design and of course we spend a lot of effort dealing with them.
 
@@ -37,7 +37,7 @@ One of the most important qualities of a codebase, when it comes to change, is h
 
 3. No duplication (DRY)
 
-This rule doesn't refer to duplication at a code level, it is about knowledge duplication. DRY: Every piece of knowledge should have one and only one representation. Writing new code we could easily introduce abstractions that was already present somewhere in your system, probably our old abstraction could be reused or they could adapt to our new code if we are really dealing with a knowledge duplication.
+This rule doesn't refer to duplication at a code level, it is about knowledge duplication. DRY: Every piece of knowledge should have one and only one representation. Writing new code we could easily introduce abstractions that was already present somewhere in your system, probably our old abstractions could be reused or they could adapt to our new code if we are really dealing with a knowledge duplication.
 
 4. Small
 
