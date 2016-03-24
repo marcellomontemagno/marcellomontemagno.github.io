@@ -103,7 +103,7 @@ Copy remote repository URL fieldAt the top of your GitHub repository's Quick Set
 
 In Terminal, add the URL for the remote repository where your local repository will be pushed.
 
-	git remote add origin remote repository URL
+	git remote add origin [your remote repository URL]
 	# Sets the new remote
 	git remote -v
 	# Verifies the new remote URL
