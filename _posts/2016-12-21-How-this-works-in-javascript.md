@@ -11,7 +11,7 @@ In this article I'll try to describe in a complete but concise way how it works.
 
 ### "This" in the Global Context
 
-"the value of this in the global context (outside of any function), refers to the global object, whether in strict mode or not"
+"the value of 'this' in the global context (outside of any function), refers to the global object, whether in strict mode or not"
 
     // In web browsers, the window object is also the global object:
     this === window // true
@@ -21,13 +21,13 @@ In this article I'll try to describe in a complete but concise way how it works.
 
 ### "This" in the Function Context
 
-"Inside a function, the value of this depends on how the function is invoked"
+"Inside a function, the value of 'this' depends on how the function is invoked"
 
 Let's see how it changes depending on the function invocation pattern
 
 #### 1) Simple function call
 
-"When a function is invoked as a simple call his value of this refers to the global object or undefined if running in strict mode"
+"When a function is invoked as a simple call its value of 'this' refers to the global object or undefined if running in strict mode"
 
     function f1(){
       return this;
@@ -78,7 +78,7 @@ this is always true even when we involve the object's prototype chain or object 
 
 #### 3) With the new keyword (as a constructor function)
 
-"When a function invoked with the new keyword, its 'this' value is the new object being constructed, whether in strict mode or not"
+"When a function is invoked with the new keyword, its 'this' value is the new object being constructed, whether in strict mode or not"
 
     function C(){
       this.prop = 30;
@@ -107,7 +107,7 @@ obviously invoking a method on the new constructed object will fall in the "obje
 
 ### What's different in strict mode?
 
-"For a strict mode function, the specified this is not boxed into an object, and if unspecified, it will be undefined instead of the global Object.
+"For a strict mode function, the specified 'this' is not boxed into an object, and if unspecified, it will be undefined instead of the global Object.
 
 When not running in strict mode the object passed to a function as 'this' will always be an object, in detail:
 
@@ -116,5 +116,3 @@ When not running in strict mode the object passed to a function as 'this' will a
 - the global object if an undefined or null 'this' is passed
 
 Not only is automatic boxing a performance cost, but exposing the global object in browsers is a security hazard, because the global object provides access to functionality that "secure" JavaScript environments must restrict.
-
-
