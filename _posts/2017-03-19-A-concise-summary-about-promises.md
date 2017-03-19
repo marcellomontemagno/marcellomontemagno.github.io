@@ -4,12 +4,12 @@ title: A concise summary about promises
 category: Javascript
 ---
 
-##Why this article?
+## Why this article?
 
 There is a lot of documentation about promises online but in my opinion it is often verbose and confusing, especially about error handling.
 In this article I'll try to cover what I think you should really know about it in few lines and with a lot of examples.
 
-##What is a promise?
+## What is a promise?
 
 A promise is a placeholder for the result of an asynchronous operation
 
@@ -33,7 +33,7 @@ yourFunction will be executed when the promise is fulfilled
 
 yourFunction will be executed when the promise is rejected
 
-##Creating you first promise
+## Creating you first promise
 
 A promise can be created using the Promise constructor as follow
 
@@ -62,7 +62,7 @@ here's an example of how to create a promise
 - if the then or the catch block return a promise that promise will be returned
 - if the then or the catch block return any other value that value will be wrapped in a promise and that promise will be returned
 
-##Promises can be chained
+## Promises can be chained
 
 Because value returned by the promises are always wrapped in promises, promises can be chained, here an example
 
@@ -80,7 +80,7 @@ Because value returned by the promises are always wrapped in promises, promises 
         console.log(value); // "44"
     });
 
-##Avoiding nesting promises
+## Avoiding nesting promises
 
 If inexperienced it could be tempting to write code like the following
 
@@ -125,7 +125,7 @@ the same could be written as follow enhancing code reuse, separation of concerns
         console.log(result); //4
     });
 
-##Error handling
+## Error handling
 
 All the exceptions either thrown in the executorFunction or in any then and catch blocks will happen silently
 
@@ -228,7 +228,7 @@ or transform setTimeout into a promise based api as follow
         console.log(e); // Explosion!
     });
 
-##Global Promise Rejection Handling
+## Global Promise Rejection Handling
 
 Having the exceptions swallowed may be confusing, you can log them using the following event handler on the browser (node has a similar one too)
 
@@ -239,7 +239,7 @@ Having the exceptions swallowed may be confusing, you can log them using the fol
 
     Promise.reject(new Error("Explosion!"));
 
-##Promise.resolve()
+## Promise.resolve()
 
 Promise.resolve(value) method accepts a value as argument and returns a promise in the fulfilled state, everything happen synchronously.
 
@@ -249,7 +249,7 @@ Promise.resolve(value) method accepts a value as argument and returns a promise 
         console.log(value);  // 42
     });
 
-##Promise.reject()
+## Promise.reject()
 
     var promise = Promise.reject(42);
 
@@ -259,7 +259,7 @@ Promise.resolve(value) method accepts a value as argument and returns a promise 
 
 Promise.resolve(value) method accepts a value as argument and returns a promise in the rejected state, everything happen synchronously.
 
-##Responding to Multiple Promises
+## Responding to Multiple Promises
 
 Sometimes, you’ll want to monitor the progress of multiple promises in order to determine the next action
 
