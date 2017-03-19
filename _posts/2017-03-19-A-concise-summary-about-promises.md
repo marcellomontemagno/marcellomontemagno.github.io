@@ -196,7 +196,7 @@ reject a promise or throw an exception inside a promise is exactly the same beca
       console.log(e); // Never invoked
     });
 
-in the previous example the Promise cannot know about the exception thrown in the setTimeout async callback and cannot transform it into a rejection.
+in the previous example the exception is thrown in the asynchronous part of the code and because of that the executor function cannot know about the thrown exception and will not be able to transform it into a rejection.
 To fix it you can either use reject as follow
 
     new Promise(function(resolve,reject) {
