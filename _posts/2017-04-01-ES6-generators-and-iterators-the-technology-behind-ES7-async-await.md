@@ -171,7 +171,7 @@ Arguments passed to next() become the values returned by the yield where the exe
 Remember that generator functions stop execution after each yield statement till a next is invoked.
 See the image below to understand what is executed and when.
 
-//todo ====image====
+![Generator execution](/img/generators.png "Generator execution")
 
 - when createIterator() is invoked no code of the function is executed
 - when the first next is invoked the yellow part of the function is executed and 1 is yielded in the iterator value
@@ -210,7 +210,7 @@ Here's another interesting example:
 Till no argument is passed to next the value returned by yield is undefined and therefore fn1 and fn2 are not reset.
 Notice that this example is also interesting because we have an infinite loop but we are actually stopping the execution of that loop till the another next is invoked. 
 
-##Throwing Errors in Iterators
+## Throwing Errors in Iterators
 It’s possible to pass not just data into iterators but also error conditions. Iterators can choose to implement a throw() method that instructs the iterator to throw an error when it resumes.
 
 	function *createIterator() {
@@ -283,7 +283,7 @@ If no return is present, the last call to next() on an iterator returns undefine
 
 Note: The spread operator and for-of ignore any value specified by a return statement. As soon as they see done is true, they stop without reading the value. 
 
-##Delegating Generators
+## Delegating Generators
 
 Generators can delegate to other iterators using a special form of yield with a star (*) character.
 
@@ -344,7 +344,7 @@ Generator delegation also lets you make further use of generator return values.
 
 Here, the createCombinedIterator() generator delegates to createNumberIterator() and assigns the return value to result.
 
-##Asynchronous Task Running
+## Asynchronous Task Running
 
 That was a lot of stuff to lear, but where is your reward?
 
@@ -452,7 +452,3 @@ This new version of the task runner is ready for all asynchronous tasks, here an
 This example is performing the asynchronous readFile() operation without making any callbacks visible in the main code, cool isn't it?
 This pattern + promises instead of callbacks is basically what's behind the async await feature in ES7.
 Don't you think that "function*", "yield" and "run" look a lot like "async", "await" and invoking a function marked as "async"?
-
-
-
-
