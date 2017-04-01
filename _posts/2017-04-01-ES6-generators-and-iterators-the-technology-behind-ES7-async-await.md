@@ -81,7 +81,7 @@ The yield keyword can only be used inside of generators. Use of yield anywhere e
 
 Even though yield is technically inside of createIterator(), this code is a syntax error because yield cannot cross function boundaries. In this way, yield is similar to return, in that a nested function cannot return a value for its containing function.
 
-Iterables and for-of
+## Iterables and for-of
 
 All collection objects (arrays, sets, and maps) and strings are iterables in ECMAScript 6 and so they have a default iterator specified.
 Symbol.iterator symbol specifies a function that returns an iterator for the given object
