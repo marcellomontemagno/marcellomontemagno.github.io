@@ -30,7 +30,7 @@ Function calls are stored as a stack of frames.
 
 When calling bar, a first frame is created containing bar's arguments and local variables. When bar calls foo, a second frame is created and pushed on top of the first one containing foo's arguments and local variables. When foo returns, the top frame element is popped out of the stack (leaving only bar's call frame). When bar returns, the stack is empty.
 
-### Heap
+### Heap
 
 Objects are allocated in a heap which is just a name to denote a large mostly unstructured region of memory.
 
