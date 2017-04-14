@@ -4,47 +4,47 @@ title: Everything you need to know about objects in JS, From object literals to 
 category: Javascript
 ---
 
-## How many ways I have to create object javascript?
+## How many ways you have to create object javascript?
 
 Unfortunately you have many
 
-    - Using Object.create(...)
-    - Using Object literals
-    - Using constructor functions
-    - Using ES6 classes
+- Using Object.create(...)
+- Using Object literals
+- Using constructor functions
+- Using ES6 classes
 
 All of them will involve inheritance so is important to have some basic info about it before to start.
 
-### Class based vs prototypal inheritance
+## Class based vs prototypal inheritance
 
 In class based inheritance you have classes
 
-    - Classes are not object instances.
-    - Classes are a blueprint, a description used to create new object instances.
-    - Classes can inherit from other classes.
-    - Classes can be used to create new object instances through the new operator.
+- Classes are not object instances.
+- Classes are a blueprint, a description used to create new object instances.
+- Classes can inherit from other classes.
+- Classes can be used to create new object instances through the "new" operator.
 
 In prototypal inheritance classes do not exist
 
-    - You only have real object instances.
-    - Objects inherit directly from other real object instances.
+- You only have real object instances.
+- Objects inherit directly from other real object instances.
 
 Javascript doesn't have class based inheritance, it has prototypal inheritance. The class keyword introduced in ES2015 is only syntactical sugar, under the hood it creates a structure of objects instances mimicking the class based model.
 
 ## What is a prototype?
 
-A prototype is an object instance nothing more than that. JavaScript objects usually inherit properties and methods from their prototype.
+A prototype is an object instance nothing more than that. JavaScript objects usually inherit properties and methods from a prototype.
 
 ## The prototype chain, properties delegation, and properties shadowing
 
-In prototypal inheritance having an object C extending B and B extending an object A means that the instance C is linked to the instance B trough a reference and that B is linked to A through another reference. This creates a chain called the prototype chain. When you ask for a property on the object C the following happen:
+In prototypal inheritance having an object C extending B and B extending an object A means that the instance C is linked to the instance B through a reference and that B is linked to A through another reference. This creates a chain called the prototype chain. When you ask for a property on the object C the following happen:
 
 - if the property is present its value is returned
 - if the property is not present the hidden [[prototype]] property is used to retrieve the object prototype (its parent) and the same logic is performed on it until either a property is found or the end of the prototype chain is reached
 
-The hidden [[prototype]] property of objects is the one holding the link to their prototype (parent), inspecting an object in chrome this property has the name "__proto__".
+The hidden [[prototype]] property of objects is the one holding the link to their prototype (parent), inspecting an object in chrome this property has the name "\_\_proto\_\_".
 
-Note: is not safe to access the property "__proto__" directly, we will see later a safe way to do it.
+Note: is not safe to access the property "\_\_proto\_\_" directly, we will see later a safe way to do it.
 
 The mechanism of going from the bottom to the top of the prototype chain in order to retrieve a property is called properties delegation.
 
@@ -53,6 +53,7 @@ The property delegation returns only the first property with the requested name 
 ## Object.create
 
 The most basic way to create object in javascript is through the Object.create method.
+
 The Object.create(proto[, propertiesObject]) method creates a new object with the specified prototype object and properties.
 
 ### The basic way to create an object with no prototype?
@@ -60,7 +61,7 @@ The Object.create(proto[, propertiesObject]) method creates a new object with th
     var obj = Object.create(null);
     obj.field1 = 1;
 
-obj will be a simple plain object, inspecting obj in chrome will show no "__proto__" property hence no parent is present, obj has no prototype.
+obj will be a simple plain object, inspecting obj in chrome will show no "\_\_proto\_\_" property hence no parent is present, obj has no prototype.
 
 ### The basic way to create an object with a prototype
 
@@ -69,7 +70,7 @@ obj will be a simple plain object, inspecting obj in chrome will show no "__prot
 
     var childObj = Object.create(protoObj);
 
-inspecting childObj in chrome will show a "__proto__" property with value protoObj, protoObj is the childObj's prototype.
+inspecting childObj in chrome will show a "\_\_proto\_\_" property with value protoObj, protoObj is the childObj's prototype.
 
     console.log(childObj.field1) // 1
 
@@ -90,7 +91,7 @@ The object literal notation take this in account and create an object whose prot
 
 because of properties delegation now you could also call obj.toString(), obj.valueOf() etc.
 
-Note: in the previous example "__proto__" has been accessed directly only for explanation purposes, is not safe to access directly to this property.
+Note: in the previous example "\_\_proto\_\_" has been accessed directly only for explanation purposes, is not safe to access directly to this property.
 
 ### Object.getPrototypeOf
 
@@ -126,7 +127,7 @@ A constructor function is a normal function invoked with the keyword "new".
 
 Note: by convention a constructor function name will have the first letter uppercase.
 
-I'll show what is going on under the hood when we use constructor functions through an example:
+We'll show what is going on under the hood when a constructor functions is used through an example:
 
     var ObjClass = function(){this.field1=1}; //notice that the function returns nothing
     var objInstance = new ObjClass(); //the new operator does something magic for us but we'll see later
@@ -142,8 +143,8 @@ The prototype property of the constructor function links the object that will be
 
 The value of the prototype property of the constructor function is an object having
 
-    - A constructor property linking the constructor function
-    - A [[prototype]] property linking Object.prototype (like any other normal object in js)
+- A constructor property linking the constructor function
+- A [[prototype]] property linking Object.prototype (like any other normal object in js)
 
 I strongly suggest you to run the previous example in the console and inspect objInstance. Inspecting objInstance in the console you can see that it is an object whose [[prototype]] links ObjClass.prototype and so inheriting its constructor property
 
@@ -153,9 +154,9 @@ even if constructor property is not directly present on objInstance.
 
 Is important to notice that the prototype property value of ObjClass will be shared between all the instances of ObjClass.
 
-### The new operator
+### The "new" operator
 
-We understood that defining a constructor function is like defining an object type, but the function we defined in the previous example uses "this" and returns nothing, where is the magic? The response is, the new operator take care of something for us, in detail:
+We understood that defining a constructor function is like defining an object type, but the function we defined in the previous example uses "this" and returns nothing, where is the magic? The response is, the "new" operator take care of something for us, in detail:
 
 When the code "new ObjClass()" is executed, the following happen:
 
@@ -164,7 +165,7 @@ When the code "new ObjClass()" is executed, the following happen:
 - If the constructor function doesn't explicitly return an object, the object created in step 1 is returned. (Normally constructors don't return a value, but they can choose to do so if they want to override the normal object creation process.)
 - If the constructor function explicitly returns an object it will be the result of the whole new expression.
 
-Many developer argue about the new operator saying that the only way to distinguish between a function that is meant to be invoked with new operator and one that is not is through the naming convention. Invoking a function that is meant to be a constructor function without the new operator is actually dangerous and will break the behaviour of that function because "this" will have another value and the return value will also be different.
+Many developer argue about the "new" operator saying that the only way to distinguish between a function that is meant to be invoked with "new" operator and one that is not is through the naming convention. Invoking a function that is meant to be a constructor function without the "new" operator is actually dangerous and will break the behaviour of that function because "this" will have another value and the return value will also be different.
 
     function Polygon(height, width) {
       this.height = height;
@@ -207,7 +208,7 @@ And is also true that ES6 classes (explained later) take care of this for you
 
 ### Important considerations about the prototype
 
-Is important to notice that because of the way new works a constructor function prototype property value is actually shared between all the constructed instances.
+Is important to notice that because of the way "new" works a constructor function prototype property value is actually shared between all the constructed instances.
 
     var ObjClass = function(fieldValue){this.field=fieldValue};
     var objInstance1 = new ObjClass(1);
@@ -245,11 +246,11 @@ and also a different is adding a method through "this" while creating the object
     objInstance2.aMethod(); //invoked!
     console.log(objInstance1.aMethod === objInstance2.aMethod); //false
 
-because of the way new works in the latter case we actually have two different instances of the function "aMethod" and they are actually stored on the objInstance1 and objInstance2 directly not in their prototype chain.
+because of the way "new" works in the latest example we actually have two different instances of the function "aMethod" and they are actually stored on the objInstance1 and objInstance2 directly, not in their prototype chain.
 
 ### JS implicit constructor functions
 
-without knowing it we were already using some constructor function provided by javascript, one example is Object, the example below proves it:
+Without knowing it we were already using some constructor function provided by javascript, one example is Object, the example below proves it:
 
     var obj = {};
     console.log(Object.getPrototypeOf(obj) === Object.prototype); //true
@@ -315,9 +316,9 @@ here the example implemented properly
     console.log(Object.getPrototypeOf(Object.getPrototypeOf(Object.getPrototypeOf(square))) === Object.prototype); //true
     console.log(Object.getPrototypeOf(Object.getPrototypeOf(Object.getPrototypeOf(square))).constructor === Object); //true
 
-### Can I have the same exact structure with no new operator?
+### Can I have the same exact structure with no "new" operator?
 
-well you could, here the same example mimicking class inheritance without the new operator:
+well you could, here the same example mimicking class inheritance without the "new" operator:
 
     function Polygon(height, width) {
         var instance = Object.create(Polygon.prototype);
@@ -368,11 +369,13 @@ Well here a simplify version of the same example, is prototypal inheritance, and
 
     var square = Square(1,2);
 
+    console.log(square.width); // 2
+    console.log(square.height); // 1
+    console.log(square.area()); // 2
+
 ### Should I avoid constructor functions then?
 
-Well, Is not in the scope of this article to persuade you from using constructor functions, but I suggest you this further reading if you are considering it
-
-[common misconceptions about inheritance in javascript](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a#.ijpuy2wht "common misconceptions about inheritance in javascript"){:target="_blank"}
+Well, Is not in the scope of this article to persuade you from using constructor functions, but I suggest you [this](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a#.ijpuy2wht "common misconceptions about inheritance in javascript"){:target="_blank"} further reading if you are considering it.
 
 ## What about ES6 classes?
 
