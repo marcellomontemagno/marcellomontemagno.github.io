@@ -64,7 +64,7 @@ here's an example of how to create a promise
 
 ## Promises can be chained
 
-Because value returned by the promises are always wrapped in promises, promises can be chained, here an example
+Because values returned by the promises are always wrapped in promises, promises can be chained, here an example
 
     var p1 = new Promise(function(resolve, reject) {
         resolve(42);
@@ -127,7 +127,7 @@ the same could be written as follow enhancing code reuse, separation of concerns
 
 ## Error handling
 
-All the exceptions either thrown in the executorFunction or in any then and catch blocks will happen silently
+All the exceptions either thrown in the executorFunction or in any then and catch blocks will be swallowed
 
     var p1 = new Promise(function(resolve, reject) {
         console.log('executing p1');
@@ -136,7 +136,12 @@ All the exceptions either thrown in the executorFunction or in any then and catc
 
     console.log("I'm executed the exception has been swallowed");
 
-exceptions/rejections can be handled in a single catch block and handling them may change the resolution flow
+running the previous example will in fact log:
+
+    executing p1
+    promises throw:6 I'm executed the exception has been swallowed
+
+Exceptions/rejections can be handled in a single catch block and handling them may change the resolution flow
 
     var p1 = new Promise(function(resolve, reject) {
         resolve(1);
