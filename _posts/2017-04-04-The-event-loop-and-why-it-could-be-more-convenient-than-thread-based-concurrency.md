@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The "event loop" and why it could be more convenient than thread based concurrency
-metaDescription: why node is faster than java, an introduction to the event loop and a brief comparison with thread based concurrency
+metaDescription: why is node faster than java? An introduction to the event loop and a brief comparison with thread based concurrency
 category: Javascript
 ---
 

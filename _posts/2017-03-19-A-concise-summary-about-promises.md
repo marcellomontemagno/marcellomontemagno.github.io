@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A concise summary about promises
+metaDescription: A short but comprehensive guide on Promises, error handling included.
 category: Javascript
 ---
 

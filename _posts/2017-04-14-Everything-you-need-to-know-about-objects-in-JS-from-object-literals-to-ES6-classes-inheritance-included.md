@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Everything you need to know about objects in JS, From object literals to ES6 classes, inheritance included
+metaDescription: A comprehensive guide on objects in javascript with a comparison between different styles and examples of inheritance
 category: Javascript
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ES6 generators and iterators, the technology behind ES7 async await
+metaDescription: An introduction to ES6 generators and how they have been used to implement async await in javascript
 category: Javascript
 ---
 
@@ -11,13 +12,13 @@ This article is very dense and longer than my usual ones, but trust me, you'll b
 
 ## What Are Iterators?
 
-Iterators are just objects with a specific interface designed for iteration. All iterator objects have a next() method that returns a result object. The result object has two properties: value, which is the next value, and done, which is a boolean that’s true when there are no more values to return. 
+Iterators are just objects with a specific interface designed for iteration. All iterator objects have a next() method that returns a result object. The result object has two properties: value, which is the next value, and done, which is a boolean that’s true when there are no more values to return.
 If you call next() after the last value has been returned, the method returns done as true and value contains the return value for the iterator or undefined.
 
 Here a simplified implementation of an iterator:
- 
+
     function makeIterator(array) {
-        var nextIndex = 0;    
+        var nextIndex = 0;
         return {
            next: function() {
                return nextIndex < array.length ?
@@ -26,16 +27,16 @@ Here a simplified implementation of an iterator:
            }
         };
     }
-    
+
     const iterator = makeIterator([1,2,3])
-    
+
     let next = iterator.next();
-    
+
     while(!next.done){
         console.log(next.value);
         next = iterator.next();
     }
-    
+
 the previous code prints
 
 	1
@@ -183,7 +184,7 @@ Here's another interesting example:
 	function* fibonacci() {
 	  var fn1 = 0;
 	  var fn2 = 1;
-	  while (true) {  
+	  while (true) {
 	    var current = fn1;
 	    fn1 = fn2;
 	    fn2 = current + fn1;
@@ -208,7 +209,7 @@ Here's another interesting example:
 	console.log(sequence.next().value);     // 3
 
 Till no argument is passed to next the value returned by yield is undefined and therefore fn1 and fn2 are not reset.
-Notice that this example is also interesting because we have an infinite loop but we are actually stopping the execution of that loop till the another next is invoked. 
+Notice that this example is also interesting because we have an infinite loop but we are actually stopping the execution of that loop till the another next is invoked.
 
 ## Throwing Errors in Iterators
 It’s possible to pass not just data into iterators but also error conditions. Iterators can choose to implement a throw() method that instructs the iterator to throw an error when it resumes.
@@ -252,7 +253,7 @@ It helps to think of next() and throw() as both being instructions to the iterat
 
 ## Generator Return Statements
 
-You can use the return statement to exit early 
+You can use the return statement to exit early
 
 	function *createIterator() {
 	    yield 1;
@@ -266,7 +267,7 @@ You can use the return statement to exit early
 	console.log(iterator.next());           // "{ value: 1, done: false }"
 	console.log(iterator.next());           // "{ value: undefined, done: true }"
 
-You can also use the return to specify a yielded value for the last call to the next() method. 
+You can also use the return to specify a yielded value for the last call to the next() method.
 If no return is present, the last call to next() on an iterator returns undefined, but if a return is present, the done property is set to true and the value, if provided, becomes the value field.
 
 	function *createIterator() {
@@ -281,7 +282,7 @@ If no return is present, the last call to next() on an iterator returns undefine
 	console.log(iterator.next());           // "{ value: 42, done: true }"
 	console.log(iterator.next());           // "{ value: undefined, done: true }"
 
-Note: The spread operator and for-of ignore any value specified by a return statement. As soon as they see done is true, they stop without reading the value. 
+Note: The spread operator and for-of ignore any value specified by a return statement. As soon as they see done is true, they stop without reading the value.
 
 ## Delegating Generators
 
@@ -312,9 +313,9 @@ Generators can delegate to other iterators using a special form of yield with a 
 	console.log(iterator.next());           // "{ value: true, done: false }"
 	console.log(iterator.next());           // "{ value: undefined, done: true }"
 
-The iterator returned from createCombinedIterator() appears, from the outside, to be one consistent iterator that has produced all of the values. 
+The iterator returned from createCombinedIterator() appears, from the outside, to be one consistent iterator that has produced all of the values.
 
-Generator delegation also lets you make further use of generator return values. 
+Generator delegation also lets you make further use of generator return values.
 
 	function *createNumberIterator() {
 	    yield 1;
@@ -440,7 +441,7 @@ With this in mind, you can modify the task runner to take so that anytime result
 	}
 
 This new version of the task runner is ready for all asynchronous tasks, here an example:
-    
+
     const readConfigFile = function*() {
         let contents = yield readFile("config.json");
         doSomethingWith(contents);

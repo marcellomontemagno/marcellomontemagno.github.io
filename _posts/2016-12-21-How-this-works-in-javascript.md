@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How "this" keyword works in JS
+metaDescription: A comprehensive explanation of how the "this" keyword works in javascript
 category: Javascript
 ---
 
