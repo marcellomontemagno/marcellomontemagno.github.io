@@ -1,12 +1,13 @@
 ---
 layout: post
-title: The event loop and why it could be more convenient than thread based concurrency
+title: The "event loop" and why it could be more convenient than thread based concurrency
+metaDescription: why node is faster than java, an introduction to the event loop and a brief comparison with thread based concurrency
 category: Javascript
 ---
 
-Given that javascript runs on a single thread, have you ever wondered how the browser and node are able to do things concurrently?
+Given that javascript runs on a single thread, have you ever wondered how the browser and node are able to do things concurrently? Furthermore have you ever wondered why Node appears faster than Java in many use cases?
 
-JavaScript has a concurrency model based on an "event loop". This model is quite different from models in other languages like Java that is instead based on threads.
+The response to this questions can be found in the javascript concurrency model, javascript has in fact a concurrency model based on an "event loop" despite languages like java where concurrency is based on Treads.
 
 ## How the event loop works?
 

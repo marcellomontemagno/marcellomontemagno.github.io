@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SOLID principles
+metaDescription: An introduction to the SOLID principles, Single Responsibility Principle, Open Close Principle, Liskov's Substitution Principle, Interface Segregation Principle, Dependency Inversion Principle
 category: Software design
 ---
 
@@ -30,7 +31,7 @@ You should have isolated behaviours, in small, cohesive, packages. This allow yo
 
 'Software entities like classes, modules and functions should be open for extension but closed for modifications.'
 
-If you have a library containing a set of classes there are many reasons for which you'll prefer to extend it without changing the code that was already written e.g backward compatibility and regression testing. In other words changing code could be dangerous, once you have it written and tested you want to minimize chances to indroduce bugs. 
+If you have a library containing a set of classes there are many reasons for which you'll prefer to extend it without changing the code that was already written e.g backward compatibility and regression testing. In other words changing code could be dangerous, once you have it written and tested you want to minimize chances to indroduce bugs.
 
 Pay attention, there is the danger of introducing unnecessary extension points focusing too much on this principle, be careful to create extension points only for part of the system that will really change.
 
@@ -52,4 +53,4 @@ If we add methods that should not be there the classes implementing the interfac
 
 In the classical way when a software module (class, framework) need some other module, it initializes and holds a direct reference to it. This will make the 2 modules tight coupled leading to a problem, if we need to change the dependency we have to replace it in every piece of the code it was used. In order to decouple them the first module will provide a hook (usually a property, parameter implementing an interface) and an external module controlling the dependencies will have the responsibility to inject the reference to the second one.
 
-By applying the Dependency Inversion the modules can be easily changed just changing one and only one component, the dependency module. 
+By applying the Dependency Inversion the modules can be easily changed just changing one and only one component, the dependency module.

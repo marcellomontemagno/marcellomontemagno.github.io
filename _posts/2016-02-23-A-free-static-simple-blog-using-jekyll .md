@@ -1,6 +1,7 @@
 ---
 layout: post
-title: A free, simple, static, host-as-you-want blog in 10 minutes using jekyll 
+title: A free, simple, static, host-as-you-want blog in 10 minutes using jekyll
+metaDescription: A short guide on how to create a static blog with jekyll
 category: Misc
 ---
 
@@ -43,7 +44,7 @@ That's all you need to know trough an example:
 	Another simple paragraph
 
 	> A blockquote.
-	> 
+	>
 	> Another paragraph in the blockquote.
 
 	- list element 1
@@ -54,7 +55,7 @@ That's all you need to know trough an example:
 	**strong emphasis text**
 
 	a link [example link](http://example.com/ "With a Title"){:target="_blank"}
-	
+
 	notice that in the previous link "With a Title" and {:target="_blank"} are optionals
 
 	an image ![alt text](/path/to/img.jpg "Title")
@@ -66,14 +67,14 @@ That's all you need to know trough an example:
 		<div>
 			<p>some code</p>
 		</div>
-	
+
 [Full Markdown documntation](https://daringfireball.net/projects/markdown/ "markdown documentation"){:target="_blank"}
 
 ### What if I want to customize the style or pages that are not posts?
 
-I've choosen the [beautiful-jekyll](http://deanattali.com/beautiful-jekyll/ "beautiful-jekyll"){:target="_blank"} theme 
+I've choosen the [beautiful-jekyll](http://deanattali.com/beautiful-jekyll/ "beautiful-jekyll"){:target="_blank"} theme
 
-You can search for an existing theme online (e.g [jekyllthemes.io](http://jekyllthemes.io/ "Jekyll Themes"){:target="_blank"}) or create your own theme. 
+You can search for an existing theme online (e.g [jekyllthemes.io](http://jekyllthemes.io/ "Jekyll Themes"){:target="_blank"}) or create your own theme.
 
 Anything you need is in the [Jekyll official documentation](https://jekyllrb.com/docs/home/ "Jekyll doc"){:target="_blank"}
 
@@ -88,7 +89,7 @@ Change the current working directory to your local project.
 Initialize the local directory as a Git repository.
 
 	git init
-	
+
 Add the files in your new local repository. This stages them for the first commit.
 
 	git add .
@@ -112,7 +113,7 @@ Push the changes in your local repository to GitHub.
 
 	git push origin master
 	# Pushes the changes in your local repository up to the remote repository you specified as the origin
-	
+
 Access to your new repository through Github.com and then click on the setting button.
 
 Rename your repositoy to yourGitUsername.github.io
