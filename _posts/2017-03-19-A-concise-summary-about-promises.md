@@ -140,7 +140,7 @@ All the exceptions either thrown in the executorFunction or in any then and catc
 running the previous example will in fact log:
 
     executing p1
-    promises throw:6 I'm executed the exception has been swallowed
+    I'm executed the exception has been swallowed
 
 Exceptions/rejections can be handled in a single catch block and handling them may change the resolution flow
 
