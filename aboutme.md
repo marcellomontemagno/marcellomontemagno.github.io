@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: A curly haired programmer, enthusiast, happy to build, happy to craft!
+subtitle: A curly haired programmer, enthusiast, happy to craft!
 ---
 
 My name is Marcello Montemagno.
