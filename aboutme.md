@@ -1,17 +1,12 @@
 ---
 layout: page
 title: About me
-subtitle: A curly haired programmer, enthusiast, happy to build, happy to break if needed
+subtitle: A curly haired programmer, enthusiast, happy to build, happy to craft!
 ---
 
 My name is Marcello Montemagno.
 
-I'm a passionate programmer, a simple man, and as a simple man I like simple things and simple softwares capable to solve big problems.
-
-I will not bother you with other details about myself, there's my cv for this, but if you're still interested probably the following quote is the one who better represents me:
-
-Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
-Martin Fowler, 2008.
+I'm a passionate programmer, a simple and quite man :)
 
 ### What's in the blog, and why another blog?
 
